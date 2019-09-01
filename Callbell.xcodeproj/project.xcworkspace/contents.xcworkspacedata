@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Callbell.xcodeproj">
+      location = "self:/Users/ianyh/Documents/Callbell/CallBell.xcodeproj">
    </FileRef>
 </Workspace>

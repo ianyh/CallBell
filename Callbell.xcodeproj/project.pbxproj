@@ -10,8 +10,8 @@
 		4083A8C0231C4BA100A07D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8BF231C4BA100A07D10 /* AppDelegate.swift */; };
 		4083A8C2231C4BA200A07D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4083A8C1231C4BA200A07D10 /* Assets.xcassets */; };
 		4083A8C5231C4BA200A07D10 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4083A8C3231C4BA200A07D10 /* MainMenu.xib */; };
-		4083A8D1231C4BA200A07D10 /* CallbellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8D0231C4BA200A07D10 /* CallbellTests.swift */; };
-		4083A8DC231C4BA200A07D10 /* CallbellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8DB231C4BA200A07D10 /* CallbellUITests.swift */; };
+		4083A8D1231C4BA200A07D10 /* CallBellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8D0231C4BA200A07D10 /* CallBellTests.swift */; };
+		4083A8DC231C4BA200A07D10 /* CallBellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8DB231C4BA200A07D10 /* CallBellUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,17 +32,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4083A8BC231C4BA100A07D10 /* Callbell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Callbell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4083A8BC231C4BA100A07D10 /* CallBell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallBell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4083A8BF231C4BA100A07D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4083A8C1231C4BA200A07D10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4083A8C4231C4BA200A07D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4083A8C6231C4BA200A07D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4083A8C7231C4BA200A07D10 /* Callbell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Callbell.entitlements; sourceTree = "<group>"; };
-		4083A8CC231C4BA200A07D10 /* CallbellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallbellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4083A8D0231C4BA200A07D10 /* CallbellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbellTests.swift; sourceTree = "<group>"; };
+		4083A8C7231C4BA200A07D10 /* CallBell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallBell.entitlements; sourceTree = "<group>"; };
+		4083A8CC231C4BA200A07D10 /* CallBellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallBellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4083A8D0231C4BA200A07D10 /* CallBellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBellTests.swift; sourceTree = "<group>"; };
 		4083A8D2231C4BA200A07D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4083A8D7231C4BA200A07D10 /* CallbellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallbellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4083A8DB231C4BA200A07D10 /* CallbellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbellUITests.swift; sourceTree = "<group>"; };
+		4083A8D7231C4BA200A07D10 /* CallBellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallBellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4083A8DB231C4BA200A07D10 /* CallBellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBellUITests.swift; sourceTree = "<group>"; };
 		4083A8DD231C4BA200A07D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,9 +74,9 @@
 		4083A8B3231C4BA100A07D10 = {
 			isa = PBXGroup;
 			children = (
-				4083A8BE231C4BA100A07D10 /* Callbell */,
-				4083A8CF231C4BA200A07D10 /* CallbellTests */,
-				4083A8DA231C4BA200A07D10 /* CallbellUITests */,
+				4083A8BE231C4BA100A07D10 /* CallBell */,
+				4083A8CF231C4BA200A07D10 /* CallBellTests */,
+				4083A8DA231C4BA200A07D10 /* CallBellUITests */,
 				4083A8BD231C4BA100A07D10 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,49 +84,49 @@
 		4083A8BD231C4BA100A07D10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4083A8BC231C4BA100A07D10 /* Callbell.app */,
-				4083A8CC231C4BA200A07D10 /* CallbellTests.xctest */,
-				4083A8D7231C4BA200A07D10 /* CallbellUITests.xctest */,
+				4083A8BC231C4BA100A07D10 /* CallBell.app */,
+				4083A8CC231C4BA200A07D10 /* CallBellTests.xctest */,
+				4083A8D7231C4BA200A07D10 /* CallBellUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4083A8BE231C4BA100A07D10 /* Callbell */ = {
+		4083A8BE231C4BA100A07D10 /* CallBell */ = {
 			isa = PBXGroup;
 			children = (
 				4083A8BF231C4BA100A07D10 /* AppDelegate.swift */,
 				4083A8C1231C4BA200A07D10 /* Assets.xcassets */,
 				4083A8C3231C4BA200A07D10 /* MainMenu.xib */,
 				4083A8C6231C4BA200A07D10 /* Info.plist */,
-				4083A8C7231C4BA200A07D10 /* Callbell.entitlements */,
+				4083A8C7231C4BA200A07D10 /* CallBell.entitlements */,
 			);
-			path = Callbell;
+			path = CallBell;
 			sourceTree = "<group>";
 		};
-		4083A8CF231C4BA200A07D10 /* CallbellTests */ = {
+		4083A8CF231C4BA200A07D10 /* CallBellTests */ = {
 			isa = PBXGroup;
 			children = (
-				4083A8D0231C4BA200A07D10 /* CallbellTests.swift */,
+				4083A8D0231C4BA200A07D10 /* CallBellTests.swift */,
 				4083A8D2231C4BA200A07D10 /* Info.plist */,
 			);
-			path = CallbellTests;
+			path = CallBellTests;
 			sourceTree = "<group>";
 		};
-		4083A8DA231C4BA200A07D10 /* CallbellUITests */ = {
+		4083A8DA231C4BA200A07D10 /* CallBellUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4083A8DB231C4BA200A07D10 /* CallbellUITests.swift */,
+				4083A8DB231C4BA200A07D10 /* CallBellUITests.swift */,
 				4083A8DD231C4BA200A07D10 /* Info.plist */,
 			);
-			path = CallbellUITests;
+			path = CallBellUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4083A8BB231C4BA100A07D10 /* Callbell */ = {
+		4083A8BB231C4BA100A07D10 /* CallBell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4083A8E0231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "Callbell" */;
+			buildConfigurationList = 4083A8E0231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallBell" */;
 			buildPhases = (
 				4083A8B8231C4BA100A07D10 /* Sources */,
 				4083A8B9231C4BA100A07D10 /* Frameworks */,
@@ -136,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = Callbell;
+			name = CallBell;
 			productName = Callbell;
-			productReference = 4083A8BC231C4BA100A07D10 /* Callbell.app */;
+			productReference = 4083A8BC231C4BA100A07D10 /* CallBell.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4083A8CB231C4BA200A07D10 /* CallbellTests */ = {
+		4083A8CB231C4BA200A07D10 /* CallBellTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4083A8E3231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallbellTests" */;
+			buildConfigurationList = 4083A8E3231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallBellTests" */;
 			buildPhases = (
 				4083A8C8231C4BA200A07D10 /* Sources */,
 				4083A8C9231C4BA200A07D10 /* Frameworks */,
@@ -154,14 +154,14 @@
 			dependencies = (
 				4083A8CE231C4BA200A07D10 /* PBXTargetDependency */,
 			);
-			name = CallbellTests;
+			name = CallBellTests;
 			productName = CallbellTests;
-			productReference = 4083A8CC231C4BA200A07D10 /* CallbellTests.xctest */;
+			productReference = 4083A8CC231C4BA200A07D10 /* CallBellTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4083A8D6231C4BA200A07D10 /* CallbellUITests */ = {
+		4083A8D6231C4BA200A07D10 /* CallBellUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4083A8E6231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallbellUITests" */;
+			buildConfigurationList = 4083A8E6231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallBellUITests" */;
 			buildPhases = (
 				4083A8D3231C4BA200A07D10 /* Sources */,
 				4083A8D4231C4BA200A07D10 /* Frameworks */,
@@ -172,9 +172,9 @@
 			dependencies = (
 				4083A8D9231C4BA200A07D10 /* PBXTargetDependency */,
 			);
-			name = CallbellUITests;
+			name = CallBellUITests;
 			productName = CallbellUITests;
-			productReference = 4083A8D7231C4BA200A07D10 /* CallbellUITests.xctest */;
+			productReference = 4083A8D7231C4BA200A07D10 /* CallBellUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4083A8B7231C4BA100A07D10 /* Build configuration list for PBXProject "Callbell" */;
+			buildConfigurationList = 4083A8B7231C4BA100A07D10 /* Build configuration list for PBXProject "CallBell" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -213,9 +213,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4083A8BB231C4BA100A07D10 /* Callbell */,
-				4083A8CB231C4BA200A07D10 /* CallbellTests */,
-				4083A8D6231C4BA200A07D10 /* CallbellUITests */,
+				4083A8BB231C4BA100A07D10 /* CallBell */,
+				4083A8CB231C4BA200A07D10 /* CallBellTests */,
+				4083A8D6231C4BA200A07D10 /* CallBellUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4083A8D1231C4BA200A07D10 /* CallbellTests.swift in Sources */,
+				4083A8D1231C4BA200A07D10 /* CallBellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4083A8DC231C4BA200A07D10 /* CallbellUITests.swift in Sources */,
+				4083A8DC231C4BA200A07D10 /* CallBellUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,12 +276,12 @@
 /* Begin PBXTargetDependency section */
 		4083A8CE231C4BA200A07D10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4083A8BB231C4BA100A07D10 /* Callbell */;
+			target = 4083A8BB231C4BA100A07D10 /* CallBell */;
 			targetProxy = 4083A8CD231C4BA200A07D10 /* PBXContainerItemProxy */;
 		};
 		4083A8D9231C4BA200A07D10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4083A8BB231C4BA100A07D10 /* Callbell */;
+			target = 4083A8BB231C4BA100A07D10 /* CallBell */;
 			targetProxy = 4083A8D8231C4BA200A07D10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -417,16 +417,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Callbell/Callbell.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CallBell/CallBell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 82P2XLB4UH;
-				INFOPLIST_FILE = Callbell/Info.plist;
+				INFOPLIST_FILE = CallBell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.Callbell;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallBell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -436,16 +436,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Callbell/Callbell.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CallBell/CallBell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 82P2XLB4UH;
-				INFOPLIST_FILE = Callbell/Info.plist;
+				INFOPLIST_FILE = CallBell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.Callbell;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallBell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -459,16 +459,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 82P2XLB4UH;
-				INFOPLIST_FILE = CallbellTests/Info.plist;
+				INFOPLIST_FILE = CallBellTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallbellTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallBellTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Callbell.app/Contents/MacOS/Callbell";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallBell.temp_caseinsensitive_rename.app/Contents/MacOS/CallBell.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -480,16 +480,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 82P2XLB4UH;
-				INFOPLIST_FILE = CallbellTests/Info.plist;
+				INFOPLIST_FILE = CallBellTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallbellTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallBellTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Callbell.app/Contents/MacOS/Callbell";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallBell.temp_caseinsensitive_rename.app/Contents/MacOS/CallBell.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};
@@ -500,16 +500,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 82P2XLB4UH;
-				INFOPLIST_FILE = CallbellUITests/Info.plist;
+				INFOPLIST_FILE = CallBellUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallbellUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallBellUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Callbell;
+				TEST_TARGET_NAME = CallBell;
 			};
 			name = Debug;
 		};
@@ -520,23 +520,23 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 82P2XLB4UH;
-				INFOPLIST_FILE = CallbellUITests/Info.plist;
+				INFOPLIST_FILE = CallBellUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallbellUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallBellUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Callbell;
+				TEST_TARGET_NAME = CallBell;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4083A8B7231C4BA100A07D10 /* Build configuration list for PBXProject "Callbell" */ = {
+		4083A8B7231C4BA100A07D10 /* Build configuration list for PBXProject "CallBell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4083A8DE231C4BA200A07D10 /* Debug */,
@@ -545,7 +545,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4083A8E0231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "Callbell" */ = {
+		4083A8E0231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallBell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4083A8E1231C4BA200A07D10 /* Debug */,
@@ -554,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4083A8E3231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallbellTests" */ = {
+		4083A8E3231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallBellTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4083A8E4231C4BA200A07D10 /* Debug */,
@@ -563,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4083A8E6231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallbellUITests" */ = {
+		4083A8E6231C4BA200A07D10 /* Build configuration list for PBXNativeTarget "CallBellUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4083A8E7231C4BA200A07D10 /* Debug */,
