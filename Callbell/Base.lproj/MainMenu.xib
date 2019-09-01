@@ -13,6 +13,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Callbell" customModuleProvider="target">
             <connections>
+                <outlet property="statusMenu" destination="x6K-da-aHO" id="wrn-YV-D8O"/>
                 <outlet property="versionMenuItem" destination="fd2-JL-ynH" id="ffR-3n-MWq"/>
             </connections>
         </customObject>
@@ -25,6 +26,9 @@
                 <menuItem isSeparatorItem="YES" id="1BZ-mF-fng"/>
                 <menuItem title="View review requests..." id="kHt-Zg-HwE" userLabel="Disable">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openReviewRequestsWithSender:" target="Voe-Tx-rLC" id="O7y-NG-fVR"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="cRh-BG-uLt"/>
                 <menuItem title="Disable" id="910-r1-AhK" userLabel="Disable">
