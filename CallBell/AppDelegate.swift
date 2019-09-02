@@ -20,6 +20,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var mainMenu: NSMenu?
     
     private var monitor: ReviewRequestsMonitor?
+    private var isEnabled: Bool = false {
+        didSet {
+            let statusItemImage: NSImage?
+            
+            if isEnabled {
+                statusItemImage = NSImage(named: "status")
+            } else {
+                statusItemImage = NSImage(named: "status-disabled")
+            }
+            
+            statusItemImage?.isTemplate = true
+            
+            statusItem?.button?.image = statusItemImage
+        }
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -74,21 +89,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         alert.messageText = error.flatMap { $0.localizedDescription } ?? "Unknown Error"
         alert.runModal()
     }
-    
-    private func updateStatusImage(isEnabled: Bool) {
-        let statusItemImage: NSImage?
-        
-        if isEnabled {
-            statusItemImage = NSImage(named: "status")
-        } else {
-            statusItemImage = NSImage(named: "status-disabled")
-        }
-        
-        statusItemImage?.isTemplate = true
-        
-        statusItem?.button?.image = statusItemImage
-    }
-    
+
     private func resetMonitoring() {
         do {
             let userData = try UserData.existingUserData()
@@ -96,16 +97,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             monitor = ReviewRequestsMonitor(userData: userData) { [weak self] result in
                 do {
                     let hasReviewRequests = try result.get()
-                    self?.updateStatusImage(isEnabled: hasReviewRequests)
+                    self?.isEnabled = hasReviewRequests
                 } catch {
-                    self?.updateStatusImage(isEnabled: false)
+                    self?.isEnabled = false
                     self?.presentError(error)
                 }
             }
             monitor?.start()
         } catch {
             monitor = nil
-            updateStatusImage(isEnabled: false)
+            isEnabled = false
             
             if let userDataError = error as? UserDataError, case .noStoredData = userDataError {
                 return
