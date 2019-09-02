@@ -98,6 +98,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     let hasReviewRequests = try result.get()
                     self?.updateStatusImage(isEnabled: hasReviewRequests)
                 } catch {
+                    self?.updateStatusImage(isEnabled: false)
                     self?.presentError(error)
                 }
             }
@@ -111,8 +112,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             
             presentError(error)
-            
-            return
         }
     }
 }
