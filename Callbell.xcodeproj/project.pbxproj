@@ -12,6 +12,7 @@
 		4083A8C5231C4BA200A07D10 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4083A8C3231C4BA200A07D10 /* MainMenu.xib */; };
 		4083A8D1231C4BA200A07D10 /* CallBellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8D0231C4BA200A07D10 /* CallBellTests.swift */; };
 		4083A8DC231C4BA200A07D10 /* CallBellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8DB231C4BA200A07D10 /* CallBellUITests.swift */; };
+		40C412B9231C975F009054A7 /* ReviewRequestsMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C412B8231C975F009054A7 /* ReviewRequestsMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		4083A8D7231C4BA200A07D10 /* CallBellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallBellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4083A8DB231C4BA200A07D10 /* CallBellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBellUITests.swift; sourceTree = "<group>"; };
 		4083A8DD231C4BA200A07D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C412B8231C975F009054A7 /* ReviewRequestsMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewRequestsMonitor.swift; path = ../../CallBell/CallBell/ReviewRequestsMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				4083A8C3231C4BA200A07D10 /* MainMenu.xib */,
 				4083A8C6231C4BA200A07D10 /* Info.plist */,
 				4083A8C7231C4BA200A07D10 /* CallBell.entitlements */,
+				40C412B8231C975F009054A7 /* ReviewRequestsMonitor.swift */,
 			);
 			path = CallBell;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C412B9231C975F009054A7 /* ReviewRequestsMonitor.swift in Sources */,
 				4083A8C0231C4BA100A07D10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
