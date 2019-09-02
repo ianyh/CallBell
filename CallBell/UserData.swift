@@ -82,6 +82,20 @@ struct UserData {
         UserDefaults.standard.set(username, forKey: "username")
     }
     
+    func delete() throws {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: username
+        ]
+        let status = SecItemDelete(query as CFDictionary)
+        
+        guard status == errSecSuccess else {
+            throw UserDataError.failedWritingToKeychain(status)
+        }
+        
+        UserDefaults.standard.removeObject(forKey: "username")
+    }
+    
     private func clearExistingUserData() throws {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,

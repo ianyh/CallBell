@@ -49,14 +49,14 @@
         </menu>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="w8v-PS-IUa">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <rect key="contentRect" x="131" y="158" width="283" height="119"/>
+            <rect key="contentRect" x="131" y="158" width="283" height="152"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="7yz-b4-8QW">
-                <rect key="frame" x="0.0" y="0.0" width="283" height="119"/>
+                <rect key="frame" x="0.0" y="0.0" width="283" height="152"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3aZ-IY-CpS">
-                        <rect key="frame" x="94" y="80" width="169" height="22"/>
+                        <rect key="frame" x="94" y="113" width="169" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Ugj-EP-2Vr">
                             <font key="font" usesAppearanceFont="YES"/>
@@ -65,7 +65,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHF-Jy-5eT">
-                        <rect key="frame" x="18" y="82" width="70" height="17"/>
+                        <rect key="frame" x="18" y="115" width="70" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Username:" id="kjq-v1-leO">
                             <font key="font" metaFont="system"/>
@@ -74,7 +74,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4JQ-JN-qPh">
-                        <rect key="frame" x="43" y="57" width="44" height="17"/>
+                        <rect key="frame" x="43" y="90" width="44" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Token:" id="PQn-gV-h5M">
                             <font key="font" metaFont="system"/>
@@ -83,7 +83,7 @@
                         </textFieldCell>
                     </textField>
                     <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3f9-uZ-Ln4">
-                        <rect key="frame" x="94" y="49" width="169" height="22"/>
+                        <rect key="frame" x="94" y="82" width="169" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Lof-S0-GCi">
                             <font key="font" metaFont="system"/>
@@ -95,7 +95,7 @@
                         </secureTextFieldCell>
                     </secureTextField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCn-Rs-1Nt">
-                        <rect key="frame" x="199" y="13" width="70" height="32"/>
+                        <rect key="frame" x="199" y="46" width="70" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yh2-UZ-qfi">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -105,9 +105,20 @@
                             <action selector="saveTokenWithSender:" target="Voe-Tx-rLC" id="2zb-kj-cVh"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwl-23-LiV">
+                        <rect key="frame" x="150" y="13" width="119" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Delete Token" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="j6d-53-uCl">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="deleteTokenWithSender:" target="Voe-Tx-rLC" id="yha-KO-pcE"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-472" y="106"/>
+            <point key="canvasLocation" x="-472.5" y="122"/>
         </window>
         <menu title="Main Menu" systemMenu="main" id="aAi-V2-RHR">
             <items>

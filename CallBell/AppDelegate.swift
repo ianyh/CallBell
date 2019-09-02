@@ -58,6 +58,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         resetMonitoring()
     }
     
+    @IBAction func deleteToken(sender: Any) {
+        do {
+            let userData = try UserData.existingUserData()
+            try userData.delete()
+        } catch {
+            presentError(error)
+        }
+        
+        resetMonitoring()
+    }
+    
     private func presentError(_ error: Error? = nil) {
         let alert = NSAlert()
         alert.messageText = error.flatMap { $0.localizedDescription } ?? "Unknown Error"
@@ -93,12 +104,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             monitor?.start()
         } catch {
             monitor = nil
+            updateStatusImage(isEnabled: false)
             
             if let userDataError = error as? UserDataError, case .noStoredData = userDataError {
-                updateStatusImage(isEnabled: false)
-            } else {
-                presentError(error)
+                return
             }
+            
+            presentError(error)
             
             return
         }
