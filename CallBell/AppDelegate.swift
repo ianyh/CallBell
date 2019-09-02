@@ -14,6 +14,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var statusMenu: NSMenu?
     @IBOutlet var versionMenuItem: NSMenuItem?
     
+    @IBOutlet var usernameField: NSTextField?
+    @IBOutlet var tokenField: NSSecureTextField?
+    
+    @IBOutlet var mainMenu: NSMenu?
+    
     private var monitor: ReviewRequestsMonitor?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -29,9 +34,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func openReviewRequests(sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://github.com/pulls/review-requested")!)
+    }
+    
+    @IBAction func saveToken(sender: Any) {
+        guard let username = usernameField?.stringValue, !username.isEmpty else {
+            return presentError()
+        }
+        
+        guard let token = tokenField?.stringValue.data(using: .utf8), !token.isEmpty else {
+            return presentError()
+        }
+        
+        let userData = UserData(username: username, token: token)
+        
+        do {
+            try userData.save()
+        } catch {
+            presentError(error)
+        }
+        
+        resetMonitoring()
+    }
+    
+    private func presentError(_ error: Error? = nil) {
+        let alert = NSAlert()
+        alert.messageText = error.flatMap { $0.localizedDescription } ?? "Unknown Error"
+        alert.runModal()
+    }
+    
     private func updateStatusImage(isEnabled: Bool) {
         let statusItemImage: NSImage?
-
+        
         if isEnabled {
             statusItemImage = NSImage(named: "status")
         } else {
@@ -39,18 +74,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         statusItemImage?.isTemplate = true
-
+        
         statusItem?.button?.image = statusItemImage
     }
     
     private func resetMonitoring() {
-        monitor = ReviewRequestsMonitor(username: "ianyh", token: "<>") { [weak self] hasReviewRequests in
-            self?.updateStatusImage(isEnabled: hasReviewRequests)
+        do {
+            let userData = try UserData.existingUserData()
+            
+            monitor = ReviewRequestsMonitor(userData: userData) { [weak self] result in
+                do {
+                    let hasReviewRequests = try result.get()
+                    self?.updateStatusImage(isEnabled: hasReviewRequests)
+                } catch {
+                    self?.presentError(error)
+                }
+            }
+            monitor?.start()
+        } catch {
+            monitor = nil
+            
+            if let userDataError = error as? UserDataError, case .noStoredData = userDataError {
+                updateStatusImage(isEnabled: false)
+            } else {
+                presentError(error)
+            }
+            
+            return
         }
-        monitor?.start()
-    }
-    
-    @IBAction func openReviewRequests(sender: Any) {
-        NSWorkspace.shared.open(URL(string: "https://github.com/pulls/review-requested")!)
     }
 }

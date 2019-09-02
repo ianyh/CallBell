@@ -18,16 +18,17 @@ private struct RequestResult: Decodable {
 
 class ReviewRequestsMonitor {
     private let encodedAuth: String
-    private let callback: (Bool) -> Void
+    private let callback: (Result<Bool, Error>) -> Void
     
     private var timer: Timer?
     private var dataTask: URLSessionDataTask?
     
-    init(username: String, token: String, callback: @escaping (Bool) -> Void) {
-        self.encodedAuth = "\(username):\(token)".data(using: .utf8)!.base64EncodedString()
-        self.callback = { value in
+    init(userData: UserData, callback: @escaping (Result<Bool, Error>) -> Void) {
+        let decodedToken = String(data: userData.token, encoding: .utf8)!
+        self.encodedAuth = "\(userData.username):\(decodedToken)".data(using: .utf8)!.base64EncodedString()
+        self.callback = { result in
             DispatchQueue.main.async {
-                callback(value)
+                callback(result)
             }
         }
     }
@@ -59,19 +60,21 @@ class ReviewRequestsMonitor {
                 return
             }
             
-            guard let data = data else {
-                callback(false)
-                return
+            let result = Result { () -> Bool in
+                guard let data = data else {
+                    return false
+                }
+                
+                let decoder = JSONDecoder()
+                
+                guard let result = try? decoder.decode(RequestResult.self, from: data) else {
+                    return false
+                }
+                
+                return result.totalCount > 0
             }
             
-            let decoder = JSONDecoder()
-            
-            guard let result = try? decoder.decode(RequestResult.self, from: data) else {
-                callback(false)
-                return
-            }
-            
-            callback(result.totalCount > 0)
+            callback(result)
         }
         dataTask?.resume()
     }
