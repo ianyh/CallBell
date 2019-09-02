@@ -14,11 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var statusMenu: NSMenu?
     @IBOutlet var versionMenuItem: NSMenuItem?
     
-    private lazy var monitor: ReviewRequestsMonitor = {
-        return ReviewRequestsMonitor(username: "ianyh", token: "<>") { hasReviewRequests in
-            self.updateStatusImage(isEnabled: hasReviewRequests)
-        }
-    }()
+    private var monitor: ReviewRequestsMonitor?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -29,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         versionMenuItem?.title = "Version \(shortVersion) (\(version))"
         
         DispatchQueue.main.async {
-            self.monitor.start()
+            self.resetMonitoring()
         }
     }
     
@@ -45,6 +41,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItemImage?.isTemplate = true
 
         statusItem?.button?.image = statusItemImage
+    }
+    
+    private func resetMonitoring() {
+        monitor = ReviewRequestsMonitor(username: "ianyh", token: "<>") { [weak self] hasReviewRequests in
+            self?.updateStatusImage(isEnabled: hasReviewRequests)
+        }
+        monitor?.start()
     }
     
     @IBAction func openReviewRequests(sender: Any) {
