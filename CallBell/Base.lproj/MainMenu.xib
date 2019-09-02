@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CallBell" customModuleProvider="target">
             <connections>
                 <outlet property="countMenuItem" destination="t5e-iC-95o" id="KPK-8a-wZu"/>
+                <outlet property="enabledMenuItem" destination="910-r1-AhK" id="ScH-mc-BDJ"/>
                 <outlet property="mainMenu" destination="aAi-V2-RHR" id="OnV-X9-mSU"/>
                 <outlet property="statusMenu" destination="x6K-da-aHO" id="Seg-e8-3LA"/>
                 <outlet property="tokenField" destination="3f9-uZ-Ln4" id="BPX-7I-SAb"/>
@@ -28,10 +29,10 @@
                 <menuItem title="Version" enabled="NO" id="fd2-JL-ynH">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="1BZ-mF-fng"/>
                 <menuItem title="1 pending review request" enabled="NO" id="t5e-iC-95o">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="1BZ-mF-fng"/>
                 <menuItem title="View review requests..." id="7fr-R7-kyW" userLabel="Open requests">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -39,8 +40,11 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="cRh-BG-uLt"/>
-                <menuItem title="Disable" enabled="NO" id="910-r1-AhK" userLabel="Disable">
+                <menuItem title="Enabled" state="on" id="910-r1-AhK" userLabel="Disable">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleEnabledWithSender:" target="Voe-Tx-rLC" id="sjk-Lx-ZrN"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Change token..." id="dRA-Pc-6GT">
                     <modifierMask key="keyEquivalentModifierMask"/>
