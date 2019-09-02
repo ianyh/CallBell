@@ -28,24 +28,30 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="1BZ-mF-fng"/>
-                <menuItem title="View review requests..." id="kHt-Zg-HwE" userLabel="Open requests">
+                <menuItem title="View review requests..." id="7fr-R7-kyW" userLabel="Open requests">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="openReviewRequestsWithSender:" target="Voe-Tx-rLC" id="CpS-td-Z7a"/>
+                        <action selector="openReviewRequestsWithSender:" target="Voe-Tx-rLC" id="Ric-dd-F0z"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="cRh-BG-uLt"/>
-                <menuItem title="Disable" id="910-r1-AhK" userLabel="Disable">
+                <menuItem title="Disable" enabled="NO" id="910-r1-AhK" userLabel="Disable">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="Preferences..." id="dRA-Pc-6GT">
+                <menuItem title="Change token..." id="dRA-Pc-6GT">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="makeKeyAndOrderFront:" target="w8v-PS-IUa" id="ZFB-Mw-rqA"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Quit CallBell" id="iR3-ep-xlC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-1" id="Cfk-GE-eZe"/>
+                    </connections>
+                </menuItem>
             </items>
-            <point key="canvasLocation" x="-179" y="92"/>
+            <point key="canvasLocation" x="-201" y="-41"/>
         </menu>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="w8v-PS-IUa">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
@@ -126,7 +132,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="CallBell" systemMenu="apple" id="M2Z-Pm-lpW">
                         <items>
-                            <menuItem title="About test" id="lgB-Qw-MtD">
+                            <menuItem title="About CallBell" id="lgB-Qw-MtD">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="hX7-PZ-LtV"/>
@@ -140,7 +146,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="l5t-4M-nbM"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="Uhu-bF-rKy"/>
-                            <menuItem title="Hide test" keyEquivalent="h" id="1Kb-wQ-vSh">
+                            <menuItem title="Hide CallBell" keyEquivalent="h" id="1Kb-wQ-vSh">
                                 <connections>
                                     <action selector="hide:" target="-1" id="dN6-uf-nY4"/>
                                 </connections>
@@ -155,12 +161,6 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="unhideAllApplications:" target="-1" id="bWD-RH-bDo"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="Q5b-aT-Glh"/>
-                            <menuItem title="Quit test" keyEquivalent="q" id="iR3-ep-xlC">
-                                <connections>
-                                    <action selector="terminate:" target="-1" id="Cfk-GE-eZe"/>
                                 </connections>
                             </menuItem>
                         </items>
