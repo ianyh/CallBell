@@ -32,6 +32,10 @@ class ReviewRequestsMonitor {
         }
     }
     
+    deinit {
+        timer?.invalidate()
+    }
+    
     func start() {
         self.timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { [weak self] _ in
             self?.check()
