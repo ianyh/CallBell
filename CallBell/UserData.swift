@@ -61,7 +61,7 @@ struct UserData {
     
     func save() throws {
         do {
-            try clearExistingUserData()
+            try delete()
         } catch (error: UserDataError.noStoredData) {
             // noop
         } catch {
@@ -83,20 +83,6 @@ struct UserData {
     }
     
     func delete() throws {
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrAccount as String: username
-        ]
-        let status = SecItemDelete(query as CFDictionary)
-        
-        guard status == errSecSuccess else {
-            throw UserDataError.failedWritingToKeychain(status)
-        }
-        
-        UserDefaults.standard.removeObject(forKey: "username")
-    }
-    
-    private func clearExistingUserData() throws {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: username
