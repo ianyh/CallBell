@@ -13,6 +13,7 @@
 		4083A8D1231C4BA200A07D10 /* CallBellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8D0231C4BA200A07D10 /* CallBellTests.swift */; };
 		4083A8DC231C4BA200A07D10 /* CallBellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083A8DB231C4BA200A07D10 /* CallBellUITests.swift */; };
 		40C412B9231C975F009054A7 /* ReviewRequestsMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C412B8231C975F009054A7 /* ReviewRequestsMonitor.swift */; };
+		40D84406231D6E0E0046B437 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D84405231D6E0E0046B437 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		4083A8DB231C4BA200A07D10 /* CallBellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBellUITests.swift; sourceTree = "<group>"; };
 		4083A8DD231C4BA200A07D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40C412B8231C975F009054A7 /* ReviewRequestsMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewRequestsMonitor.swift; path = ../../CallBell/CallBell/ReviewRequestsMonitor.swift; sourceTree = "<group>"; };
+		40D84405231D6E0E0046B437 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				4083A8C6231C4BA200A07D10 /* Info.plist */,
 				4083A8C7231C4BA200A07D10 /* CallBell.entitlements */,
 				40C412B8231C975F009054A7 /* ReviewRequestsMonitor.swift */,
+				40D84405231D6E0E0046B437 /* UserData.swift */,
 			);
 			path = CallBell;
 			sourceTree = "<group>";
@@ -193,6 +196,9 @@
 					4083A8BB231C4BA100A07D10 = {
 						CreatedOnToolsVersion = 10.3;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -259,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D84406231D6E0E0046B437 /* UserData.swift in Sources */,
 				40C412B9231C975F009054A7 /* ReviewRequestsMonitor.swift in Sources */,
 				4083A8C0231C4BA100A07D10 /* AppDelegate.swift in Sources */,
 			);
@@ -358,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -413,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -435,6 +442,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallBell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -454,6 +462,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianyh.CallBell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
