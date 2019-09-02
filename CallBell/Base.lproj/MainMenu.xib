@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CallBell" customModuleProvider="target">
             <connections>
+                <outlet property="countMenuItem" destination="t5e-iC-95o" id="KPK-8a-wZu"/>
                 <outlet property="mainMenu" destination="aAi-V2-RHR" id="OnV-X9-mSU"/>
                 <outlet property="statusMenu" destination="x6K-da-aHO" id="Seg-e8-3LA"/>
                 <outlet property="tokenField" destination="3f9-uZ-Ln4" id="BPX-7I-SAb"/>
@@ -25,6 +26,9 @@
         <menu id="x6K-da-aHO" userLabel="Status Menu">
             <items>
                 <menuItem title="Version" enabled="NO" id="fd2-JL-ynH">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="1 pending review request" enabled="NO" id="t5e-iC-95o">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="1BZ-mF-fng"/>

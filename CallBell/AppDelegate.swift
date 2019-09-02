@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem?
     @IBOutlet var statusMenu: NSMenu?
     @IBOutlet var versionMenuItem: NSMenuItem?
+    @IBOutlet var countMenuItem: NSMenuItem?
     
     @IBOutlet var usernameField: NSTextField?
     @IBOutlet var tokenField: NSSecureTextField?
@@ -20,8 +21,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var mainMenu: NSMenu?
     
     private var monitor: ReviewRequestsMonitor?
-    private var isEnabled: Bool = false {
+    private var reviewRequestCount: Int = 0 {
         didSet {
+            // Update the status image
+            let isEnabled = self.reviewRequestCount > 0
             let statusItemImage: NSImage?
             
             if isEnabled {
@@ -33,6 +36,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             statusItemImage?.isTemplate = true
             
             statusItem?.button?.image = statusItemImage
+            
+            // Update the count item
+            countMenuItem?.title = "\(self.reviewRequestCount) requested reviews"
         }
     }
 
@@ -96,17 +102,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             monitor = ReviewRequestsMonitor(userData: userData) { [weak self] result in
                 do {
-                    let hasReviewRequests = try result.get()
-                    self?.isEnabled = hasReviewRequests
+                    self?.reviewRequestCount = try result.get()
                 } catch {
-                    self?.isEnabled = false
+                    self?.reviewRequestCount = 0
                     self?.presentError(error)
                 }
             }
             monitor?.start()
         } catch {
             monitor = nil
-            isEnabled = false
+            reviewRequestCount = 0
             
             if let userDataError = error as? UserDataError, case .noStoredData = userDataError {
                 return

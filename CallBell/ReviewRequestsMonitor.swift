@@ -18,12 +18,12 @@ private struct RequestResult: Decodable {
 
 class ReviewRequestsMonitor {
     private let encodedAuth: String
-    private let callback: (Result<Bool, Error>) -> Void
+    private let callback: (Result<Int, Error>) -> Void
     
     private var timer: Timer?
     private var dataTask: URLSessionDataTask?
     
-    init(userData: UserData, callback: @escaping (Result<Bool, Error>) -> Void) {
+    init(userData: UserData, callback: @escaping (Result<Int, Error>) -> Void) {
         let decodedToken = String(data: userData.token, encoding: .utf8)!
         self.encodedAuth = "\(userData.username):\(decodedToken)".data(using: .utf8)!.base64EncodedString()
         self.callback = { result in
@@ -60,18 +60,18 @@ class ReviewRequestsMonitor {
                 return
             }
             
-            let result = Result { () -> Bool in
+            let result = Result { () -> Int in
                 guard let data = data else {
-                    return false
+                    return 0
                 }
                 
                 let decoder = JSONDecoder()
                 
                 guard let result = try? decoder.decode(RequestResult.self, from: data) else {
-                    return false
+                    return 0
                 }
                 
-                return result.totalCount > 0
+                return result.totalCount
             }
             
             callback(result)
