@@ -27,6 +27,7 @@ struct UserData {
         
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: "com.ianyh.CallBell",
             kSecAttrAccount as String: username,
             kSecMatchLimit as String: kSecMatchLimitOne,
             kSecReturnAttributes as String: true,
@@ -70,6 +71,7 @@ struct UserData {
         
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: "com.ianyh.CallBell",
             kSecAttrAccount as String: username,
             kSecValueData as String: token
         ]
@@ -85,6 +87,7 @@ struct UserData {
     func delete() throws {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: "com.ianyh.CallBell",
             kSecAttrAccount as String: username
         ]
         let status = SecItemDelete(query as CFDictionary)
