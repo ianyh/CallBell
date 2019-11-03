@@ -67,6 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var countMenuItem: NSMenuItem?
     @IBOutlet var enabledMenuItem: NSMenuItem?
     
+    @IBOutlet var preferencesWindow: NSWindow?
     @IBOutlet var usernameField: NSTextField?
     @IBOutlet var tokenField: NSSecureTextField?
     
@@ -88,7 +89,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let version = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
         let shortVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
         versionMenuItem?.title = "Version \(shortVersion) (\(version))"
-        
+
+        preferencesWindow?.level = .floating
+
         DispatchQueue.main.async {
             self.resetMonitoring()
         }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,6 +18,7 @@
                 <outlet property="countMenuItem" destination="t5e-iC-95o" id="KPK-8a-wZu"/>
                 <outlet property="enabledMenuItem" destination="910-r1-AhK" id="ScH-mc-BDJ"/>
                 <outlet property="mainMenu" destination="aAi-V2-RHR" id="OnV-X9-mSU"/>
+                <outlet property="preferencesWindow" destination="w8v-PS-IUa" id="ts9-yx-giT"/>
                 <outlet property="statusMenu" destination="x6K-da-aHO" id="Seg-e8-3LA"/>
                 <outlet property="tokenField" destination="3f9-uZ-Ln4" id="BPX-7I-SAb"/>
                 <outlet property="usernameField" destination="3aZ-IY-CpS" id="C6T-8h-HP6"/>
@@ -768,6 +770,7 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="140" y="154"/>
         </menu>
     </objects>
 </document>
